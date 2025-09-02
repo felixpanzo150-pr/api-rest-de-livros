@@ -6,7 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class EntityLivros {
+public class Livros {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,7 +17,7 @@ public class EntityLivros {
     private int ano;
     private double preco;
 
-    public EntityLivros(Long id, String autor, String nome, int ano, double preco) {
+    public Livros(Long id, String autor, String nome, int ano, double preco) {
         Id = id;
         this.autor = autor;
         this.nome = nome;
@@ -65,13 +65,13 @@ public class EntityLivros {
         this.preco = preco;
     }
 
-    public EntityLivros(){
+    public Livros(){
 
     }
 
     @Override
     public String toString() {
-        return "EntityLivros{" +
+        return "Livros{" +
                 "Id=" + Id +
                 ", nome='" + nome + '\'' +
                 ", autor='" + autor + '\'' +
